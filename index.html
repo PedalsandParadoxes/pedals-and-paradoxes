@@ -37,7 +37,16 @@
   .expanded-field-grid .field-photo.tall{min-height:400px}
 }
 @media(max-width:600px){
-  .field-grid.expanded-field-grid{grid-template-columns:1fr}
+  .field-grid.expanded-field-grid{
+    width:100%;
+    max-width:100%;
+    margin-inline:auto;
+    grid-template-columns:minmax(0,1fr);
+  }
+  .expanded-field-grid .field-photo{
+    min-width:0;
+    max-width:100%;
+  }
   .expanded-field-grid .field-photo.wide{grid-column:auto}
   .expanded-field-grid .field-photo.tall{grid-row:auto;min-height:0}
 }
