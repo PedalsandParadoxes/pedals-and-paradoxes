@@ -276,10 +276,10 @@ document.addEventListener('DOMContentLoaded', function () {
   L.control.zoom({position:'bottomright'}).addTo(map);
 
   // Quiet basemap: the map is there to give geographic context, not compete with the story.
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png', {
-    attribution: '&copy; OpenStreetMap contributors &copy; CARTO',
-    subdomains: 'abcd',
-    maxZoom: 19
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors',
+    maxZoom: 19,
+    referrerPolicy: 'strict-origin-when-cross-origin'
   }).addTo(map);
 
   // Approximate planning geometry only. Replace with real GPX tracks as the journey happens.
