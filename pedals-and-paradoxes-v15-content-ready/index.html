@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pedals & Paradoxes — Getting Lost to Find Myself</title>
+<meta name="description" content="I'm not entirely sure where this is going. I'm going to find out.">
+<link rel="stylesheet" href="styles.css">
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+</head>
+<body>
+<header class="header">
+  <a class="logo" href="#top">PEDALS &amp; PARADOXES</a>
+  <nav>
+    <a href="#journey-map">Journey</a>
+    <a href="#now">Now</a>
+    <a href="#journal">Journal</a>
+    <a href="#past">Past Rides</a>
+    <a href="#bike">Bike</a>
+    <a href="#live">Live</a>
+    <a href="#about">About</a><a href="#photos">Photos</a>
+  </nav>
+  <button class="menu" aria-label="Toggle menu" aria-expanded="false">MENU</button>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="hero-bg"></div><div class="hero-shade"></div>
+  <div class="hero-copy">
+    <div class="eyebrow">PEDALS &amp; PARADOXES · AN ONGOING JOURNEY</div>
+    <h1>Getting lost<br>to find myself.</h1>
+    <p class="subhead">On the road to discovery, whatever that means.</p>
+    <p class="intro">I'm not entirely sure where this is going.<br><strong>I'm going to find out.</strong></p>
+    <a class="scroll" href="#journey-map">Start here <span>↓</span></a>
+  </div>
+</section>
+
+<section class="manifesto">
+  <p class="eyebrow">Why</p>
+  <div class="manifesto-text">
+    <p>A man desperate to fall back in love with life and discover himself at the same time.</p>
+  </div>
+  <div class="split-copy">
+    <div><span class="label">LEAVING</span><strong>Yacht life.</strong></div>
+    <div><span class="label">LOOKING FOR</span><strong>What I'm going to do next.<br>And who I want to be.</strong></div>
+  </div>
+</section>
+<section class="now" id="now">
+  <div class="now-grid">
+    <div class="now-label"><p class="eyebrow">Now</p><span>WHERE I AM IN THE STORY</span></div>
+    <div class="now-main">
+      <p class="now-status">Working.</p>
+      <p class="now-copy">The bike is waiting in California. I'm back in the yacht world for now, doing the practical bit while the next chapter gets lined up.</p>
+      <div class="now-next">
+        <span>NEXT</span>
+        <strong>Victorville → California desert → Baja → GDMBR Northbound</strong>
+      </div>
+    </div>
+    <div class="now-side">
+      <span>THE POINT</span>
+      <p>Keep moving towards the life I actually want, without pretending I know exactly what it looks like yet.</p>
+    </div>
+  </div>
+</section>
+
+
+<section id="journey-map" class="real-route">
+  <div class="route-head">
+    <div><p class="eyebrow">The route</p><h2>Where I've been.<br>Where I'm going.</h2></div>
+    <div><p>The line is the journey so far. The pale line is the plan. As the ride happens, the plan gets replaced by the road actually taken.</p><span>CLICK A POINT FOR THE CHAPTER.</span></div>
+  </div>
+
+  <div class="route-map-wrap">
+    <div id="route-map" aria-label="Interactive Pedals and Paradoxes journey map"></div><noscript><p class="map-fallback">The interactive map needs JavaScript. The journey is Minneapolis → Phoenix → Victorville → Baja → GDMBR Northbound.</p></noscript>
+    <div class="route-legend">
+      <div><i class="legend-past"></i> BEEN THERE</div>
+      <div><i class="legend-plan"></i> THE PLAN</div>
+      <div><i class="legend-next"></i> NEXT</div><div><i class="legend-transfer"></i> TRANSFER</div>
+    </div>
+  </div>
+
+  <div class="route-chapters">
+    <a href="#journal"><span>01</span><strong>Minneapolis</strong><em>PAST</em></a>
+    <a href="#journey-map"><span>02</span><strong>Phoenix</strong><em>PAST</em></a>
+    <a href="#journey-map"><span>03</span><strong>Victorville</strong><em>BASE / NEXT</em></a>
+    <a href="#journey-map"><span>04</span><strong>Baja</strong><em>NEXT</em></a>
+    <a href="#journey-map"><span>05</span><strong>GDMBR Northbound</strong><em>THE BIG ONE</em></a>
+  </div>
+</section>
+
+<section class="journal" id="journal">
+  <div class="journal-heading">
+    <div><p class="eyebrow">The journal</p><h2>Thoughts from<br>the road.</h2></div>
+    <p>Longer pieces. Good days, bad days, stupid decisions, beautiful places and whatever else seems worth remembering.</p>
+  </div>
+  <a class="featured-entry" href="journal/first-mile.html">
+    <div class="entry-image real-photo" style="background-image:url('images/10.jpg')"></div>
+    <div class="entry-copy"><p class="meta">7 APRIL 2026 · BARCELONA</p><h3>What the fuck am I doing here?</h3><p>Everything is lined up. The bike is waiting in America. The flights are booked. And somehow I'm wondering if I should go at all.</p><span>Read the first piece →</span></div>
+  </a>
+  <div class="journal-list">
+    <div class="journal-row coming"><div class="journal-date">02 · —</div><div class="journal-row-main"><p class="meta">COMING LATER</p><h3>Another story from the road.</h3><p>Stories will appear here in chronological order as the journey unfolds.</p></div><div class="journal-arrow">—</div></div>
+  </div>
+</section>
+
+<section class="past" id="past">
+  <div class="section-top">
+    <div><p class="eyebrow">The archive</p><h2>Past rides.</h2></div>
+    <p class="section-note">Previous experiments. They got me here.</p>
+  </div>
+  <div class="past-grid">
+    <article><div class="past-image" style="background-image:url('images/06.jpg')"></div><div class="past-copy"><span>01</span><h3>Minneapolis</h3><p>Archive</p></div></article>
+    <article><div class="past-image" style="background-image:url('images/03.jpg')"></div><div class="past-copy"><span>02</span><h3>Phoenix</h3><p>Archive</p></div></article>
+    <article><div class="past-image" style="background-image:url('images/08.jpg')"></div><div class="past-copy"><span>03</span><h3>Victorville</h3><p>Archive</p></div></article>
+  </div>
+</section>
+
+<section class="feature-sections">
+  <section id="bike" class="bike-page">
+  <div class="bike-head">
+    <div>
+      <p class="eyebrow">The bike</p>
+      <h2>The machine<br>that gets me there.</h2>
+    </div>
+    <p class="bike-intro">I don't need the lightest bike, the newest bike or the bike everyone on the internet says I should have. I need a bike I trust when the road gets long, the weather turns bad and the next town is a long way away.</p>
+  </div>
+
+  <div class="bike-hero-grid">
+    <div class="bike-hero-image" style="background-image:url('images/01.jpg')"></div>
+    <div class="bike-story">
+      <p class="eyebrow">Why this one</p>
+      <h3>Built for<br>being away.</h3>
+      <p>This is the bike I keep coming back to for long trips. A custom titanium setup, built around the idea that the less I have to worry about the machine, the more attention I can give to the place I'm riding through.</p>
+      <p>It carries everything I need without pretending I don't need anything. Bags, water, tools, food, cameras, a bit of comfort. Enough to live on the road, not enough to turn the road into a mobile garage.</p>
+      <p class="bike-quote">The point isn't the bike.<br><strong>It's what the bike lets me do.</strong></p>
+    </div>
+  </div>
+
+  <div class="bike-specs">
+    <div><span>FRAME</span><strong>Custom titanium</strong><p>Built around long days, loaded travel and keeping things simple.</p></div>
+    <div><span>COCKPIT</span><strong>Made for miles</strong><p>Comfort and control matter more than looking fast.</p></div>
+    <div><span>WHEELS</span><strong>Handbuilt</strong><p>A new wheel with a dynamo hub is already waiting in the States.</p></div>
+    <div><span>LUGGAGE</span><strong>Enough, not everything</strong><p>The kit is there to support the journey rather than become the journey.</p></div>
+  </div>
+
+  <div class="gear-section" id="gear">
+    <div class="gear-heading">
+      <div><p class="eyebrow">The gear</p><h3>What comes<br>with me.</h3></div>
+      <p>I'm interested in gear because good gear disappears. It works, it gets dirty, it gets repaired and you stop thinking about it.</p>
+    </div>
+    <div class="gear-list">
+      <div class="gear-row"><span>01</span><strong>Sleeping</strong><p>Shelter, sleep system and the small things that make a patch of ground feel like home.</p></div>
+      <div class="gear-row"><span>02</span><strong>Cooking</strong><p>A simple Trangia setup. Hot food and coffee are disproportionately important.</p></div>
+      <div class="gear-row"><span>03</span><strong>Navigation</strong><p>Phone, maps and the ability to work things out when the plan inevitably changes.</p></div>
+      <div class="gear-row"><span>04</span><strong>Communication</strong><p>An inReach Mini 2. Satellite tracking, messaging and a way for people to know where I am when there is no phone signal.</p></div>
+      <div class="gear-row"><span>05</span><strong>Repair kit</strong><p>The stuff that keeps a small mechanical problem from becoming a very large walk.</p></div>
+      <div class="gear-row"><span>06</span><strong>Camera</strong><p>Insta360, phone and whatever else is useful for remembering what actually happened.</p></div>
+    </div>
+    <div class="gear-footer">THE FULL KIT LIST WILL GROW HERE AS THE JOURNEY GROWS.</div>
+  </div>
+</section>
+
+
+<section id="live" class="live-page">
+  <div class="live-head">
+    <div><p class="eyebrow">Live from the road</p><h2>Where the<br>fuck am I?</h2></div>
+    <div class="live-copy">
+      <p>When I’m travelling, the inReach Mini 2 can transmit track points over the satellite network. Garmin MapShare can then make that track available to people following the journey.</p>
+      <p class="live-note">THIS WILL GO LIVE WHEN THE JOURNEY STARTS.</p>
+    </div>
+  </div>
+  <div class="live-map live-awaiting" aria-label="Live tracking is not connected yet">
+    <div class="live-awaiting-inner">
+      <div class="live-pulse" aria-hidden="true"></div>
+      <span>LIVE TRACKING</span>
+      <strong>AWAITING MAPSHARE</strong>
+      <p>The live map will appear here when the inReach Mini 2 is connected.</p>
+    </div>
+  </div>
+  <div class="live-stats">
+    <div><span>STATUS</span><strong>NOT CONNECTED</strong></div><div><span>LAST UPDATE</span><strong>—</strong></div>
+    <div><span>POSITION</span><strong>—</strong></div><div><span>TRACK</span><strong>INREACH MINI 2</strong></div>
+  </div>
+  <div class="live-footer"><p>Garmin MapShare will provide the tracking page. The site will link to it once the public MapShare URL is ready.</p><a href="#" onclick="return false;" aria-disabled="true">MAPSHARE LINK →</a></div>
+</section>
+</section>
+
+<section class="photo-strip">
+  <div class="photo-wide" style="background-image:url('images/01.jpg')"></div>
+  <div class="photo-stack"><div style="background-image:url('images/04.jpg')"></div><div style="background-image:url('images/05.jpg')"></div></div>
+  <div class="photo-wide photo-wide-alt" style="background-image:url('images/13.jpg')"></div>
+</section>
+
+<section class="field-notes" id="photos">
+  <div class="section-top"><div><p class="eyebrow">Field notes</p><h2>Things I<br>saw.</h2></div><p class="section-note">Not highlights. Just evidence that I was there.</p></div>
+  <div class="field-grid">
+    <button class="field-photo tall" data-full="images/01.jpg" style="background-image:url('images/01.jpg')" aria-label="Open photograph of loaded bicycle on the road"></button>
+    <button class="field-photo" data-full="images/04.jpg" style="background-image:url('images/04.jpg')" aria-label="Open photograph of cyclist resting in the landscape"></button>
+    <button class="field-photo wide" data-full="images/05.jpg" style="background-image:url('images/05.jpg')" aria-label="Open photograph of bicycle beside a freight train"></button>
+    <button class="field-photo" data-full="images/02.jpg" style="background-image:url('images/02.jpg')" aria-label="Open photograph of corn field"></button>
+    <button class="field-photo tall" data-full="images/03.jpg" style="background-image:url('images/03.jpg')" aria-label="Open photograph of bicycle in front of rock formations"></button>
+    <button class="field-photo" data-full="images/11.jpg" style="background-image:url('images/11.jpg')" aria-label="Open photograph of bicycle at Battle Pass"></button>
+  </div>
+</section>
+<div class="lightbox" aria-hidden="true"><button class="lightbox-close" aria-label="Close photograph">×</button><img src="" alt=""></div>
+
+<section class="snapshot">
+<div><span>THE PLAN</span><strong>MOVE</strong></div>
+<div><span>THE REALITY</span><strong>FIGURE IT OUT</strong></div>
+<div><span>THE RULE</span><strong>KEEP GOING</strong></div>
+</section>
+
+<section class="about" id="about">
+  <div class="about-top">
+    <div>
+      <p class="eyebrow">About</p>
+      <h2>I'm Adam.</h2>
+    </div>
+    <p class="about-kicker">A long time at sea.<br>A bicycle. A lot of questions.</p>
+  </div>
+
+  <div class="about-body">
+    <div class="about-lead">
+      <p>I’ve spent most of my adult life working on boats. Yachting has given me a bloody good life in a lot of ways. It’s also taken up an enormous amount of it.</p>
+      <p>For years, when work got too much, I’d leave, get on a bicycle and disappear for a while. Somewhere along the way I realised those trips weren’t just holidays.</p>
+      <p><strong>They were the bits of my life where I felt most like myself.</strong></p>
+    </div>
+    <div class="about-side">
+      <p>So this is an experiment.</p>
+      <p>I’m riding because I love riding. I’m travelling because I want to see what’s on the other side of the next hill. And I’m writing because I’m trying to make sense of what comes next.</p>
+      <p>There’s no grand plan here. No ten-step system. No promise that I’m going to figure everything out.</p>
+      <p>Just a man trying to fall back in love with life, while working out who the hell he wants to be.</p>
+    </div>
+  </div>
+
+  <div class="about-bottom">
+    <div><span>THE WORK</span><strong>25+ years<br>on yachts.</strong></div>
+    <div><span>THE ESCAPE</span><strong>Long rides.<br>Slow travel.</strong></div>
+    <div><span>THE QUESTION</span><strong>What comes<br>next?</strong></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div>PEDALS &amp; PARADOXES</div>
+  <div>GETTING LOST TO FIND MYSELF.</div>
+  <div>© 2026</div>
+</footer>
+
+<script>
+const menu=document.querySelector('.menu');
+const nav=document.querySelector('nav');
+menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));});
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+const lightbox=document.querySelector('.lightbox');
+const lightboxImg=lightbox.querySelector('img');
+document.querySelectorAll('.field-photo').forEach(btn=>btn.addEventListener('click',()=>{lightboxImg.src=btn.dataset.full;lightbox.classList.add('open');lightbox.setAttribute('aria-hidden','false')}));
+function closeLightbox(){lightbox.classList.remove('open');lightbox.setAttribute('aria-hidden','true');lightboxImg.src=''}
+lightbox.addEventListener('click',e=>{if(e.target===lightbox||e.target.classList.contains('lightbox-close'))closeLightbox()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLightbox()});
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const el = document.getElementById('route-map');
+  if (!el || typeof L === 'undefined') return;
+
+  const map = L.map(el, {
+    zoomControl: false,
+    scrollWheelZoom: false,
+    dragging: true,
+    attributionControl: true
+  }).setView([34.7, -111.5], 4);
+
+  L.control.zoom({position:'bottomright'}).addTo(map);
+
+  // Quiet basemap: the map is there to give geographic context, not compete with the story.
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png', {
+    attribution: '&copy; OpenStreetMap contributors &copy; CARTO',
+    subdomains: 'abcd',
+    maxZoom: 19
+  }).addTo(map);
+
+  // Approximate planning geometry only. Replace with real GPX tracks as the journey happens.
+  const past = [
+    [44.9778,-93.2650],
+    [43.4,-96.7],
+    [41.3,-99.2],
+    [39.2,-104.7],
+    [36.9,-108.0],
+    [34.6,-111.9],
+    [33.4484,-112.0740],
+    [34.54,-117.29]
+  ];
+
+  // The next ride: Victorville through the California desert, down to San Diego,
+  // then south through Baja to La Paz.
+  const nextRide = [
+    [34.54,-117.29],
+    [34.05,-116.7],
+    [33.35,-116.2],
+    [32.72,-117.16],
+    [31.86,-116.60],
+    [30.70,-115.98],
+    [29.08,-114.05],
+    [27.80,-113.00],
+    [26.05,-111.35],
+    [24.14,-110.31]
+  ];
+
+  // The return north to San Diego is a transfer, not part of the cycling route.
+  const transfer = [
+    [24.14,-110.31],
+    [27.0,-113.8],
+    [29.5,-115.0],
+    [32.72,-117.16]
+  ];
+
+  const gdmbr = [
+    [32.72,-117.16],
+    [34.8,-116.0],
+    [36.7,-114.0],
+    [38.8,-111.9],
+    [41.1,-111.6],
+    [43.6,-111.0],
+    [45.9,-110.8],
+    [47.8,-113.0],
+    [49.3,-114.1]
+  ];
+
+  L.polyline(past, {color:'#7f8560', weight:4, opacity:.9}).addTo(map);
+  L.polyline(nextRide, {color:'#9b9d95', weight:3, opacity:.72, dashArray:'7 8'}).addTo(map);
+  L.polyline(transfer, {color:'#b0aca2', weight:2, opacity:.55, dashArray:'2 8'}).addTo(map);
+  L.polyline(gdmbr, {color:'#9b9d95', weight:3, opacity:.55, dashArray:'7 8'}).addTo(map);
+
+  const chapters = [
+
+    {name:'Minneapolis', pos:[44.9778,-93.2650], state:'PAST', cls:'past'},
+    {name:'Phoenix', pos:[33.4484,-112.0740], state:'PAST', cls:'past'},
+    {name:'Victorville', pos:[34.54,-117.29], state:'BASE / NEXT', cls:'next'},
+    {name:'Baja', pos:[28.0,-113.2], state:'NEXT', cls:'next'},
+    {name:'La Paz', pos:[24.14,-110.31], state:'NEXT', cls:'next'},
+    {name:'San Diego', pos:[32.72,-117.16], state:'NEXT', cls:'next'},
+    {name:'GDMBR Northbound', pos:[49.28,-114.12], state:'PLAN', cls:'plan'}
+  ];
+
+  const bounds = L.latLngBounds(chapters.map(c => c.pos));
+  chapters.forEach(c => {
+    const marker = L.circleMarker(c.pos, {
+      radius: c.cls === 'past' ? 5 : 6,
+      color:'#151816',
+      weight:2,
+      fillColor:'#8f956b',
+      fillOpacity:c.cls === 'plan' ? .65 : 1
+    }).addTo(map);
+    marker.bindTooltip(c.name, {
+      direction:'top',
+      offset:[0,-7],
+      opacity:.95,
+      className:'pp-tooltip'
+    });
+    marker.bindPopup(
+      '<div class="pp-popup"><b>'+c.name+'</b><span>'+c.state+'</span></div>'
+    );
+  });
+
+  map.fitBounds(bounds, {paddingTopLeft:[35,35], paddingBottomRight:[35,35], maxZoom:5});
+});
+</script>
+</body>
+</html>

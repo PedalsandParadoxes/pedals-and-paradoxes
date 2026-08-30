@@ -1,0 +1,12 @@
+{
+  "site": "Pedals & Paradoxes",
+  "content_root": "content",
+  "collections": {
+    "journal": "content/journal",
+    "photos": "content/photos",
+    "journey": "content/journey",
+    "about": "content/about",
+    "gear": "content/gear"
+  },
+  "current": "content/now.md"
+}
