@@ -9,6 +9,39 @@
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+<style>
+/* Expanded What I Saw gallery */
+.field-grid.expanded-field-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:12px;
+}
+.expanded-field-grid .field-photo{
+  width:100%;
+  min-height:260px;
+  aspect-ratio:3/2;
+  border:0;
+  padding:0;
+  cursor:pointer;
+  background-position:center;
+  background-size:cover;
+  background-repeat:no-repeat;
+  transition:opacity .2s ease,transform .2s ease;
+}
+.expanded-field-grid .field-photo:hover{opacity:.9;transform:scale(.995)}
+.expanded-field-grid .field-photo.wide{grid-column:span 2;aspect-ratio:2/1.15}
+.expanded-field-grid .field-photo.tall{grid-row:span 2;aspect-ratio:auto;min-height:532px}
+@media(max-width:900px){
+  .field-grid.expanded-field-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .expanded-field-grid .field-photo.tall{min-height:400px}
+}
+@media(max-width:600px){
+  .field-grid.expanded-field-grid{grid-template-columns:1fr}
+  .expanded-field-grid .field-photo.wide{grid-column:auto}
+  .expanded-field-grid .field-photo.tall{grid-row:auto;min-height:0}
+}
+</style>
 </head>
 <body>
 <header class="header">
@@ -199,13 +232,23 @@
 
 <section class="field-notes" id="photos">
   <div class="section-top"><div><p class="eyebrow">Field notes</p><h2>Things I<br>saw.</h2></div><p class="section-note">Not highlights. Just evidence that I was there.</p></div>
-  <div class="field-grid">
-    <button class="field-photo tall" data-full="images/01.jpg" style="background-image:url('images/01.jpg')" aria-label="Open photograph of loaded bicycle on the road"></button>
-    <button class="field-photo" data-full="images/04.jpg" style="background-image:url('images/04.jpg')" aria-label="Open photograph of cyclist resting in the landscape"></button>
-    <button class="field-photo wide" data-full="images/05.jpg" style="background-image:url('images/05.jpg')" aria-label="Open photograph of bicycle beside a freight train"></button>
-    <button class="field-photo" data-full="images/02.jpg" style="background-image:url('images/02.jpg')" aria-label="Open photograph of corn field"></button>
-    <button class="field-photo tall" data-full="images/03.jpg" style="background-image:url('images/03.jpg')" aria-label="Open photograph of bicycle in front of rock formations"></button>
-    <button class="field-photo" data-full="images/11.jpg" style="background-image:url('images/11.jpg')" aria-label="Open photograph of bicycle at Battle Pass"></button>
+  <div class="field-grid expanded-field-grid">
+    <button class="field-photo wide" data-full="images/what-i-saw-01.jpg" style="background-image:url('images/what-i-saw-01.jpg')" aria-label="Open photograph of an empty road through high desert"></button>
+    <button class="field-photo" data-full="images/what-i-saw-02.jpg" style="background-image:url('images/what-i-saw-02.jpg')" aria-label="Open black and white photograph of desert landscape"></button>
+    <button class="field-photo" data-full="images/what-i-saw-03.jpg" style="background-image:url('images/what-i-saw-03.jpg')" aria-label="Open photograph of a buffalo sculpture in the city"></button>
+    <button class="field-photo" data-full="images/what-i-saw-04.jpg" style="background-image:url('images/what-i-saw-04.jpg')" aria-label="Open photograph of a Colorado roadside sign and bicycle"></button>
+    <button class="field-photo wide" data-full="images/what-i-saw-05.jpg" style="background-image:url('images/what-i-saw-05.jpg')" aria-label="Open photograph of a long road across the high desert"></button>
+    <button class="field-photo" data-full="images/what-i-saw-06.jpg" style="background-image:url('images/what-i-saw-06.jpg')" aria-label="Open photograph of red canyon cliffs and river"></button>
+    <button class="field-photo" data-full="images/what-i-saw-07.jpg" style="background-image:url('images/what-i-saw-07.jpg')" aria-label="Open photograph of a red rock canyon and river valley"></button>
+    <button class="field-photo" data-full="images/what-i-saw-08.jpg" style="background-image:url('images/what-i-saw-08.jpg')" aria-label="Open black and white photograph of desert rock formations"></button>
+    <button class="field-photo" data-full="images/what-i-saw-09.jpg" style="background-image:url('images/what-i-saw-09.jpg')" aria-label="Open black and white photograph of a desert trail sign"></button>
+    <button class="field-photo wide" data-full="images/what-i-saw-10.jpg" style="background-image:url('images/what-i-saw-10.jpg')" aria-label="Open photograph of the loaded bicycle with Monument Valley in the distance"></button>
+    <button class="field-photo" data-full="images/what-i-saw-11.jpg" style="background-image:url('images/what-i-saw-11.jpg')" aria-label="Open photograph of a campsite and tent among desert trees"></button>
+    <button class="field-photo" data-full="images/what-i-saw-12.jpg" style="background-image:url('images/what-i-saw-12.jpg')" aria-label="Open photograph of a roadside sculpture and orange van in Joshua Tree"></button>
+    <button class="field-photo wide" data-full="images/what-i-saw-13.jpg" style="background-image:url('images/what-i-saw-13.jpg')" aria-label="Open photograph of the Joshua Tree Saloon bus and loaded bicycle"></button>
+    <button class="field-photo" data-full="images/what-i-saw-14.jpg" style="background-image:url('images/what-i-saw-14.jpg')" aria-label="Open photograph of a desert plant and street corner"></button>
+    <button class="field-photo" data-full="images/what-i-saw-15.jpg" style="background-image:url('images/what-i-saw-15.jpg')" aria-label="Open self portrait beside the loaded bicycle"></button>
+    <button class="field-photo" data-full="images/what-i-saw-16.jpg" style="background-image:url('images/what-i-saw-16.jpg')" aria-label="Open photograph of a historic brick bank building"></button>
   </div>
 </section>
 <div class="lightbox" aria-hidden="true"><button class="lightbox-close" aria-label="Close photograph">×</button><img src="" alt=""></div>
