@@ -193,7 +193,7 @@
       <p>I'm interested in gear because good gear disappears. It works, it gets dirty, it gets repaired and you stop thinking about it.</p>
     </div>
     <div class="gear-list">
-      <div class="gear-row"><span>01</span><strong>Sleeping</strong><p>Zenbivy quilt and the rest of the sleep system.</p></div>
+      <div class="gear-row"><span>01</span><strong>Sleeping</strong><p>Zenbivy quilt, Therm-a-Rest NeoAir, Sea to Summit pillow and NEMO Dragonfly 2P tent.</p></div>
       <div class="gear-row"><span>02</span><strong>Cooking</strong><p>Trangia 27 UL, Aeropress Go and Gerber Compleat cutlery.</p></div>
       <div class="gear-row"><span>03</span><strong>Navigation</strong><p>Wahoo ELEMNT for riding navigation, with Garmin inReach Mini 2 for satellite tracking and communication.</p></div>
       <div class="gear-row"><span>04</span><strong>Communication</strong><p>Garmin inReach Mini 2 for satellite messaging and tracking beyond phone signal.</p></div>
@@ -373,6 +373,41 @@ document.addEventListener('DOMContentLoaded', function () {
     [32.72,-117.16], [34.8,-116.0], [36.7,-114.0], [38.8,-111.9],
     [41.1,-111.6], [43.6,-111.0], [45.9,-110.8], [47.8,-113.0], [49.3,-114.1]
   ];
+
+  // Route lines connecting the chapter points.
+  L.polyline(past, {
+    color: '#151816',
+    weight: 3,
+    opacity: 0.9,
+    lineCap: 'round',
+    lineJoin: 'round'
+  }).addTo(map);
+
+  L.polyline(nextRide, {
+    color: '#8f956b',
+    weight: 3,
+    opacity: 0.9,
+    lineCap: 'round',
+    lineJoin: 'round'
+  }).addTo(map);
+
+  L.polyline(transfer, {
+    color: '#8f956b',
+    weight: 2,
+    opacity: 0.7,
+    dashArray: '6 8',
+    lineCap: 'round',
+    lineJoin: 'round'
+  }).addTo(map);
+
+  L.polyline(gdmbr, {
+    color: '#b9b5aa',
+    weight: 3,
+    opacity: 0.9,
+    dashArray: '8 8',
+    lineCap: 'round',
+    lineJoin: 'round'
+  }).addTo(map);
 
   const chapters = [
     {name:'Minneapolis', pos:[44.9778,-93.265], state:'PAST', cls:'past'},
