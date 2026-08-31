@@ -14,6 +14,25 @@
 .about-photo{margin-top:3rem;width:100%;overflow:hidden}
 .about-photo img{display:block;width:100%;height:auto;max-height:680px;object-fit:cover}
 @media(max-width:700px){.about-photo{margin-top:2rem}.about-photo img{max-height:460px}}
+
+/* Field-notes carousel */
+.field-carousel{position:relative;margin-top:2.5rem;overflow:hidden}
+.field-carousel-track{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding:0 0 1rem;scrollbar-width:none}
+.field-carousel-track::-webkit-scrollbar{display:none}
+.field-slide{position:relative;flex:0 0 calc(33.333% - .67rem);aspect-ratio:4/5;scroll-snap-align:start;border:0;padding:0;background:none;overflow:hidden;cursor:pointer}
+.field-slide img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .45s ease}
+.field-slide:hover img{transform:scale(1.035)}
+.field-slide-caption{position:absolute;left:0;right:0;bottom:0;padding:3rem 1.25rem 1.1rem;text-align:left;background:linear-gradient(transparent,rgba(0,0,0,.72));color:#fff}
+.field-slide-caption span{display:block;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;opacity:.8;margin-bottom:.35rem}
+.field-slide-caption strong{font-size:1rem;letter-spacing:.02em}
+.carousel-controls{display:flex;align-items:center;justify-content:space-between;margin-top:1rem}
+.carousel-buttons{display:flex;gap:.5rem}
+.carousel-buttons button{width:42px;height:42px;border:1px solid currentColor;background:transparent;cursor:pointer;font-size:1.1rem}
+.carousel-dots{display:flex;gap:.4rem;align-items:center}
+.carousel-dot{width:7px;height:7px;border-radius:50%;border:0;background:currentColor;opacity:.3;padding:0}
+.carousel-dot.active{opacity:1}
+@media(max-width:900px){.field-slide{flex-basis:calc(50% - .5rem)}}
+@media(max-width:700px){.field-slide{flex-basis:86%}.field-carousel{margin-top:1.75rem}}
 </style>
 </head>
 <body>
@@ -58,7 +77,7 @@
     <div class="now-label"><p class="eyebrow">Now</p><span>WHERE I AM IN THE STORY</span></div>
     <div class="now-main">
       <p class="now-status">Working.</p>
-      <p class="now-copy">The bike is waiting in California. I'm back in the yacht world for now, doing the practical bit while the next chapter gets lined up.</p>
+      <p class="now-copy">I'm currently in Pesaro, Italy. I'm back in the yacht world for now, doing the practical bit while the next chapter gets lined up.</p>
       <div class="now-next">
         <span>NEXT</span>
         <strong>Victorville → California desert → Baja → GDMBR Northbound</strong>
@@ -75,7 +94,7 @@
 <section id="journey-map" class="real-route">
   <div class="route-head">
     <div><p class="eyebrow">The route</p><h2>Where I've been.<br>Where I'm going.</h2></div>
-    <div><p>The line is the journey so far. The pale line is the plan. As the ride happens, the plan gets replaced by the road actually taken.</p><span>CLICK A POINT FOR THE CHAPTER.</span></div>
+    <div><p>The line follows the route I actually took. The pale line is the plan. As the ride happens, the plan gets replaced by the road actually taken.</p><span>CLICK A POINT FOR THE CHAPTER.</span></div>
   </div>
 
   <div class="route-map-wrap">
@@ -88,11 +107,24 @@
   </div>
 
   <div class="route-chapters">
-    <a href="#journal"><span>01</span><strong>Minneapolis</strong><em>PAST</em></a>
-    <a href="#journey-map"><span>02</span><strong>Phoenix</strong><em>PAST</em></a>
-    <a href="#journey-map"><span>03</span><strong>Victorville</strong><em>BASE / NEXT</em></a>
-    <a href="#journey-map"><span>04</span><strong>Baja</strong><em>NEXT</em></a>
-    <a href="#journey-map"><span>05</span><strong>GDMBR Northbound</strong><em>THE BIG ONE</em></a>
+    <a href="#journey-map"><span>01</span><strong>Minneapolis</strong><em>PAST</em></a>
+    <a href="#journey-map"><span>02</span><strong>Badlands</strong><em>PAST</em></a>
+    <a href="#journey-map"><span>03</span><strong>Mount Rushmore</strong><em>PAST</em></a>
+    <a href="#journey-map"><span>04</span><strong>Devils Tower</strong><em>PAST</em></a>
+    <a href="#journey-map"><span>05</span><strong>Rawlins</strong><em>PAST</em></a>
+    <a href="#journey-map"><span>06</span><strong>Grand Junction</strong><em>PAST</em></a>
+    <a href="#journey-map"><span>07</span><strong>Arches NP</strong><em>PAST</em></a>
+    <a href="#journey-map"><span>08</span><strong>Monument Valley</strong><em>PAST</em></a>
+    <a href="#journey-map"><span>09</span><strong>Grand Canyon</strong><em>PAST</em></a>
+    <a href="#journey-map"><span>10</span><strong>Sedona</strong><em>PAST</em></a>
+    <a href="#journey-map"><span>11</span><strong>Phoenix</strong><em>PAST</em></a>
+    <a href="#journey-map"><span>12</span><strong>Wickenburg</strong><em>PAST</em></a>
+    <a href="#journey-map"><span>13</span><strong>Parker</strong><em>PAST</em></a>
+    <a href="#journey-map"><span>14</span><strong>29 Palms</strong><em>PAST</em></a>
+    <a href="#journey-map"><span>15</span><strong>Joshua Tree</strong><em>PAST</em></a>
+    <a href="#journey-map"><span>16</span><strong>Victorville</strong><em>BASE / NEXT</em></a>
+    <a href="#journey-map"><span>17</span><strong>Baja</strong><em>NEXT</em></a>
+    <a href="#journey-map"><span>18</span><strong>GDMBR Northbound</strong><em>THE BIG ONE</em></a>
   </div>
 </section>
 
@@ -116,9 +148,9 @@
     <p class="section-note">Previous experiments. They got me here.</p>
   </div>
   <div class="past-grid">
-    <article><div class="past-image" style="background-image:url('images/06.jpg')"></div><div class="past-copy"><span>01</span><h3>Minneapolis</h3><p>Archive</p></div></article>
-    <article><div class="past-image" style="background-image:url('images/03.jpg')"></div><div class="past-copy"><span>02</span><h3>Phoenix</h3><p>Archive</p></div></article>
-    <article><div class="past-image" style="background-image:url('images/08.jpg')"></div><div class="past-copy"><span>03</span><h3>Victorville</h3><p>Archive</p></div></article>
+    <article><div class="past-image" style="background-image:url('images/06.jpg')"></div><div class="past-copy"><span>01</span><h3>Camino de Santiago</h3><p>Photo collection</p></div></article>
+    <article><div class="past-image" style="background-image:url('images/03.jpg')"></div><div class="past-copy"><span>02</span><h3>Baja California</h3><p>Photo collection</p></div></article>
+    <article><div class="past-image" style="background-image:url('images/08.jpg')"></div><div class="past-copy"><span>03</span><h3>Slovenia</h3><p>Photo collection</p></div></article>
   </div>
 </section>
 
@@ -146,11 +178,11 @@
   <div class="bike-specs">
     <div><span>FRAME</span><strong>Esker Hayduke LVS — Small</strong><p>A 29er hardtail built around long days, loaded travel and keeping things simple.</p></div>
     <div><span>WHEELS</span><strong>29er · SON 28 dynamo</strong><p>Front wheel with a SON 28 dynamo hub. Rear wheel details to be added.</p></div>
-    <div><span>TYRES</span><strong>Maxxis · 29 × 2.6"</strong><p>Exact model to be added.</p></div>
+    <div><span>TYRES</span><strong>Maxxis Forekaster · 29 × 2.6"</strong><p>Trail tyres chosen for long-distance riding and mixed surfaces.</p></div>
     <div><span>DRIVETRAIN</span><strong>SRAM Eagle · 32T / 52T</strong><p>Low gearing for the bits of road that stop pretending they're roads.</p></div>
-    <div><span>COCKPIT</span><strong>PNW</strong><p>Bars and seatpost from PNW.</p></div>
+    <div><span>COCKPIT</span><strong>PNW · dropper post</strong><p>PNW cockpit setup with a dropper post.</p></div>
     <div><span>SADDLE</span><strong>Pro Stealth MTB</strong><p>Anatomical cut-out. Comfort matters when the day is measured in hours, not kilometres.</p></div>
-    <div><span>BRAKES</span><strong>SRAM D8 · front &amp; rear</strong><p>Exact model specification to be checked later.</p></div>
+    <div><span>BRAKES</span><strong>SRAM DB8 · front &amp; rear</strong><p>Hydraulic brakes for loaded riding and long descents.</p></div>
     <div><span>PEDALS</span><strong>Shimano XTR</strong><p>Simple, familiar and built to take the punishment.</p></div>
     <div><span>LUGGAGE</span><strong>Ortlieb Gravel Front + Rear</strong><p>Enough carrying capacity without turning the bike into a mobile garage.</p></div>
   </div>
@@ -161,14 +193,14 @@
       <p>I'm interested in gear because good gear disappears. It works, it gets dirty, it gets repaired and you stop thinking about it.</p>
     </div>
     <div class="gear-list">
-      <div class="gear-row"><span>01</span><strong>Sleeping</strong><p>Nemo Dragonfly 2P, Therm-a-Rest NeoAir, quilt and Sea to Summit pillow.</p></div>
-      <div class="gear-row"><span>02</span><strong>Cooking</strong><p>Trangia 27 UL. Simple cooking, hot food and coffee without much ceremony.</p></div>
-      <div class="gear-row"><span>03</span><strong>Navigation</strong><p>Garmin navigation setup. The exact device and mounting details will be added to the full kit list.</p></div>
+      <div class="gear-row"><span>01</span><strong>Sleeping</strong><p>Zenbivy quilt and the rest of the sleep system.</p></div>
+      <div class="gear-row"><span>02</span><strong>Cooking</strong><p>Trangia 27 UL, Aeropress Go and Gerber Compleat cutlery.</p></div>
+      <div class="gear-row"><span>03</span><strong>Navigation</strong><p>Wahoo ELEMNT for riding navigation, with Garmin inReach Mini 2 for satellite tracking and communication.</p></div>
       <div class="gear-row"><span>04</span><strong>Communication</strong><p>Garmin inReach Mini 2 for satellite messaging and tracking beyond phone signal.</p></div>
       <div class="gear-row"><span>05</span><strong>Camera / film</strong><p>Insta GO 2, Insta360 X5, DJI Neo drone and DJI Osmo Pocket 3.</p></div>
-      <div class="gear-row"><span>06</span><strong>Repair kit</strong><p>The boring stuff that keeps a small mechanical problem from becoming a very large walk. Full list to come.</p></div>
+      <div class="gear-row"><span>06</span><strong>Repair kit</strong><p>Silca Elettrico pump, Silca ratchet, Crankbrothers M19, tyre levers, spare brake and gear cable, tyre boot, plug kit, spare tube and tube repair.</p></div>
     </div>
-    <div class="gear-footer">THE FULL KIT LIST WILL GROW HERE AS THE JOURNEY GROWS.</div>THE FULL KIT LIST WILL GROW HERE AS THE JOURNEY GROWS.</div>
+    <div class="gear-footer">THE FULL KIT LIST WILL GROW HERE AS THE JOURNEY GROWS.</div>
   </div>
 </section>
 
@@ -205,13 +237,19 @@
 
 <section class="field-notes" id="photos">
   <div class="section-top"><div><p class="eyebrow">Field notes</p><h2>Things I<br>saw.</h2></div><p class="section-note">Not highlights. Just evidence that I was there.</p></div>
-  <div class="field-grid">
-    <button class="field-photo tall" data-full="images/01.jpg" style="background-image:url('images/01.jpg')" aria-label="Open photograph of loaded bicycle on the road"></button>
-    <button class="field-photo" data-full="images/04.jpg" style="background-image:url('images/04.jpg')" aria-label="Open photograph of cyclist resting in the landscape"></button>
-    <button class="field-photo wide" data-full="images/05.jpg" style="background-image:url('images/05.jpg')" aria-label="Open photograph of bicycle beside a freight train"></button>
-    <button class="field-photo" data-full="images/02.jpg" style="background-image:url('images/02.jpg')" aria-label="Open photograph of corn field"></button>
-    <button class="field-photo tall" data-full="images/03.jpg" style="background-image:url('images/03.jpg')" aria-label="Open photograph of bicycle in front of rock formations"></button>
-    <button class="field-photo" data-full="images/11.jpg" style="background-image:url('images/11.jpg')" aria-label="Open photograph of bicycle at Battle Pass"></button>
+  <div class="field-carousel" aria-label="Things I saw photo carousel">
+    <div class="field-carousel-track">
+      <button class="field-slide" data-full="images/01.jpg" aria-label="Open photograph of loaded bicycle on the road"><img src="images/01.jpg" alt="Loaded bicycle on the road" loading="lazy"><span class="field-slide-caption"><span>01 · On the road</span><strong>Loaded and moving.</strong></span></button>
+      <button class="field-slide" data-full="images/04.jpg" aria-label="Open photograph of cyclist resting in the landscape"><img src="images/04.jpg" alt="Cyclist resting in the landscape" loading="lazy"><span class="field-slide-caption"><span>02 · Somewhere out there</span><strong>A place worth stopping for.</strong></span></button>
+      <button class="field-slide" data-full="images/05.jpg" aria-label="Open photograph of bicycle beside a freight train"><img src="images/05.jpg" alt="Bicycle beside a freight train" loading="lazy"><span class="field-slide-caption"><span>03 · Passing through</span><strong>The world keeps moving.</strong></span></button>
+      <button class="field-slide" data-full="images/02.jpg" aria-label="Open photograph of a corn field"><img src="images/02.jpg" alt="Corn field" loading="lazy"><span class="field-slide-caption"><span>04 · Field notes</span><strong>Not everything needs a story.</strong></span></button>
+      <button class="field-slide" data-full="images/03.jpg" aria-label="Open photograph of bicycle in front of rock formations"><img src="images/03.jpg" alt="Bicycle in front of rock formations" loading="lazy"><span class="field-slide-caption"><span>05 · Out there</span><strong>Small machine. Big landscape.</strong></span></button>
+      <button class="field-slide" data-full="images/11.jpg" aria-label="Open photograph of bicycle at Battle Pass"><img src="images/11.jpg" alt="Bicycle at Battle Pass" loading="lazy"><span class="field-slide-caption"><span>06 · Battle Pass</span><strong>One of the good ones.</strong></span></button>
+    </div>
+    <div class="carousel-controls">
+      <div class="carousel-buttons"><button type="button" class="carousel-prev" aria-label="Previous photo">←</button><button type="button" class="carousel-next" aria-label="Next photo">→</button></div>
+      <div class="carousel-dots" aria-label="Choose photo"></div>
+    </div>
   </div>
 </section>
 <div class="lightbox" aria-hidden="true"><button class="lightbox-close" aria-label="Close photograph">×</button><img src="" alt=""></div>
@@ -270,7 +308,19 @@ menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.
 nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
 const lightbox=document.querySelector('.lightbox');
 const lightboxImg=lightbox.querySelector('img');
-document.querySelectorAll('.field-photo').forEach(btn=>btn.addEventListener('click',()=>{lightboxImg.src=btn.dataset.full;lightbox.classList.add('open');lightbox.setAttribute('aria-hidden','false')}));
+document.querySelectorAll('.field-slide').forEach(btn=>btn.addEventListener('click',()=>{lightboxImg.src=btn.dataset.full;lightbox.classList.add('open');lightbox.setAttribute('aria-hidden','false')}));
+const carouselTrack=document.querySelector('.field-carousel-track');
+const carouselSlides=[...document.querySelectorAll('.field-slide')];
+const carouselDots=document.querySelector('.carousel-dots');
+const carouselPrev=document.querySelector('.carousel-prev');
+const carouselNext=document.querySelector('.carousel-next');
+if(carouselTrack && carouselSlides.length){
+  carouselSlides.forEach((_,i)=>{const d=document.createElement('button');d.type='button';d.className='carousel-dot'+(i===0?' active':'');d.setAttribute('aria-label','Go to photo '+(i+1));d.addEventListener('click',()=>carouselSlides[i].scrollIntoView({behavior:'smooth',block:'nearest',inline:'start'}));carouselDots.appendChild(d)});
+  const updateDots=()=>{const left=carouselTrack.scrollLeft;let best=0,bestDist=Infinity;carouselSlides.forEach((slide,i)=>{const dist=Math.abs(slide.offsetLeft-left);if(dist<bestDist){best=i;bestDist=dist}});[...carouselDots.children].forEach((d,i)=>d.classList.toggle('active',i===best));};
+  carouselTrack.addEventListener('scroll',()=>requestAnimationFrame(updateDots));
+  carouselPrev.addEventListener('click',()=>{let i=carouselSlides.findIndex(slide=>slide.offsetLeft>=carouselTrack.scrollLeft-4);i=Math.max(0,i-1);carouselSlides[i].scrollIntoView({behavior:'smooth',block:'nearest',inline:'start'});});
+  carouselNext.addEventListener('click',()=>{let i=carouselSlides.findIndex(slide=>slide.offsetLeft>carouselTrack.scrollLeft+4);if(i<0)i=carouselSlides.length-1;carouselSlides[i].scrollIntoView({behavior:'smooth',block:'nearest',inline:'start'});});
+}
 function closeLightbox(){lightbox.classList.remove('open');lightbox.setAttribute('aria-hidden','true');lightboxImg.src=''}
 lightbox.addEventListener('click',e=>{if(e.target===lightbox||e.target.classList.contains('lightbox-close'))closeLightbox()});
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLightbox()});
@@ -299,65 +349,52 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Approximate planning geometry only. Replace with real GPX tracks as the journey happens.
   const past = [
-    [44.9778,-93.2650],
-    [43.4,-96.7],
-    [41.3,-99.2],
-    [39.2,-104.7],
-    [36.9,-108.0],
-    [34.6,-111.9],
-    [33.4484,-112.0740],
-    [34.54,-117.29]
+    [44.9778,-93.2650], [43.8554,-102.3397], [43.8791,-103.4591],
+    [44.5902,-104.7156], [41.7911,-107.2387], [39.0639,-108.5506],
+    [38.7331,-109.5925], [37.0042,-110.1730], [36.0544,-112.1401],
+    [34.8697,-111.7609], [33.4484,-112.0740], [34.0259,-112.7385],
+    [34.1400,-114.5780], [34.1357,-116.0542], [34.1347,-116.3131], [34.54,-117.29]
   ];
 
   // The next ride: Victorville through the California desert, down to San Diego,
   // then south through Baja to La Paz.
   const nextRide = [
-    [34.54,-117.29],
-    [34.05,-116.7],
-    [33.35,-116.2],
-    [32.72,-117.16],
-    [31.86,-116.60],
-    [30.70,-115.98],
-    [29.08,-114.05],
-    [27.80,-113.00],
-    [26.05,-111.35],
-    [24.14,-110.31]
+    [34.54,-117.29], [34.05,-116.7], [33.35,-116.2], [32.72,-117.16],
+    [31.86,-116.60], [30.70,-115.98], [29.08,-114.05], [27.80,-113.00],
+    [26.05,-111.35], [24.14,-110.31]
   ];
 
   // The return north to San Diego is a transfer, not part of the cycling route.
   const transfer = [
-    [24.14,-110.31],
-    [27.0,-113.8],
-    [29.5,-115.0],
-    [32.72,-117.16]
+    [24.14,-110.31], [27.0,-113.8], [29.5,-115.0], [32.72,-117.16]
   ];
 
   const gdmbr = [
-    [32.72,-117.16],
-    [34.8,-116.0],
-    [36.7,-114.0],
-    [38.8,-111.9],
-    [41.1,-111.6],
-    [43.6,-111.0],
-    [45.9,-110.8],
-    [47.8,-113.0],
-    [49.3,-114.1]
+    [32.72,-117.16], [34.8,-116.0], [36.7,-114.0], [38.8,-111.9],
+    [41.1,-111.6], [43.6,-111.0], [45.9,-110.8], [47.8,-113.0], [49.3,-114.1]
   ];
 
-  L.polyline(past, {color:'#7f8560', weight:4, opacity:.9}).addTo(map);
-  L.polyline(nextRide, {color:'#9b9d95', weight:3, opacity:.72, dashArray:'7 8'}).addTo(map);
-  L.polyline(transfer, {color:'#b0aca2', weight:2, opacity:.55, dashArray:'2 8'}).addTo(map);
-  L.polyline(gdmbr, {color:'#9b9d95', weight:3, opacity:.55, dashArray:'7 8'}).addTo(map);
-
   const chapters = [
-
-    {name:'Minneapolis', pos:[44.9778,-93.2650], state:'PAST', cls:'past'},
-    {name:'Phoenix', pos:[33.4484,-112.0740], state:'PAST', cls:'past'},
+    {name:'Minneapolis', pos:[44.9778,-93.265], state:'PAST', cls:'past'},
+    {name:'Badlands', pos:[43.8554,-102.3397], state:'PAST', cls:'past'},
+    {name:'Mount Rushmore', pos:[43.8791,-103.4591], state:'PAST', cls:'past'},
+    {name:'Devils Tower', pos:[44.5902,-104.7156], state:'PAST', cls:'past'},
+    {name:'Rawlins', pos:[41.7911,-107.2387], state:'PAST', cls:'past'},
+    {name:'Grand Junction', pos:[39.0639,-108.5506], state:'PAST', cls:'past'},
+    {name:'Arches NP', pos:[38.7331,-109.5925], state:'PAST', cls:'past'},
+    {name:'Monument Valley', pos:[37.0042,-110.173], state:'PAST', cls:'past'},
+    {name:'Grand Canyon', pos:[36.0544,-112.1401], state:'PAST', cls:'past'},
+    {name:'Sedona', pos:[34.8697,-111.7609], state:'PAST', cls:'past'},
+    {name:'Phoenix', pos:[33.4484,-112.074], state:'PAST', cls:'past'},
+    {name:'Wickenburg', pos:[34.0259,-112.7385], state:'PAST', cls:'past'},
+    {name:'Parker', pos:[34.14,-114.578], state:'PAST', cls:'past'},
+    {name:'29 Palms', pos:[34.1357,-116.0542], state:'PAST', cls:'past'},
+    {name:'Joshua Tree', pos:[34.1347,-116.3131], state:'PAST', cls:'past'},
     {name:'Victorville', pos:[34.54,-117.29], state:'BASE / NEXT', cls:'next'},
     {name:'Baja', pos:[28.0,-113.2], state:'NEXT', cls:'next'},
     {name:'La Paz', pos:[24.14,-110.31], state:'NEXT', cls:'next'},
     {name:'San Diego', pos:[32.72,-117.16], state:'NEXT', cls:'next'},
-    {name:'GDMBR Northbound', pos:[49.28,-114.12], state:'PLAN', cls:'plan'}
+    {name:'GDMBR Northbound', pos:[49.28,-114.12], state:'PLAN', cls:'plan'},
   ];
 
   const bounds = L.latLngBounds(chapters.map(c => c.pos));
